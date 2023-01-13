@@ -1,6 +1,34 @@
-.App {
-  font-family: sans-serif;
+.purpleBack {
+  position: absolute;
+  background-color: greenyellow;
   text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  border: 10px solid transparent;
+  border-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.ov5asEKyRwS9a8rl5nbMIQHaEK%26pid%3DApi%26h%3D160&f=1&ipt=ddda71094882c4c476001fd5877997ff31daf7190f3f2b3ea8aa7d05d832d597&ipo=images")
+    30 repeat;
+}
+.greenBack {
+  position: absolute;
+  background-color: purple;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  border: 10px solid transparent;
+  border-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.ov5asEKyRwS9a8rl5nbMIQHaEK%26pid%3DApi%26h%3D160&f=1&ipt=ddda71094882c4c476001fd5877997ff31daf7190f3f2b3ea8aa7d05d832d597&ipo=images")
+    30 repeat;
 }
 h4 {
   position: 1 fixed;
@@ -9,5 +37,35 @@ h4 {
 
 @font-face {
   font-family: "ComicMono";
-  src: url("./ComicMono.ttf") format("ttf");
+  src: url(https://dtinth.github.io/comic-mono-font/ComicMono.ttf)
+    format("truetype");
 }
+h5 {
+  font-family: ComicMon;
+}
+h1 {
+  font-family: "ComicMono";
+}
+.E {
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+}
+h3 {
+  padding: 0px;
+  margin: 0px;
+  font-family: "ComicMono";
+}
+p {
+  font-size: xx-small;
+  padding: 0px;
+  margin: 0px;
+  font-family: "papyrus";
+}
+.purple {
+  color: greenyellow;
+}
+.green {
+  color: purple;
+}
+
