@@ -1,6 +1,5 @@
 import "./styles.css";
-import { useState, onMount } from "react";
-import { useEffect } from "react/cjs/react.production.min";
+import { useState, onMount, useEffect } from "react";
 
 export default function App() {
   const [bruh, setBruh] = useState(false);
