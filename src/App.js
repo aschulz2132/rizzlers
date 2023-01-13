@@ -7,6 +7,17 @@ export default function App() {
   function pee() {
     navigator.clipboard.writeText("mc.rizzlers.org");
   }
+
+  function flip() {
+    let e = bruh;
+    let y = !e;
+    setBruh(y);
+  }
+  useEffect(() => {
+    setInterval(() => {
+      flip();
+    }, 1000);
+  }, [flip]);
   if (bruh) {
     return (
       <div className="purpleBack">
