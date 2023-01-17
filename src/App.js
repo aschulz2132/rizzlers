@@ -3,7 +3,10 @@ import { useState, onMount, useEffect } from "react";
 
 export default function App() {
   const [bruh, setBruh] = useState(false);
-  const [count, setCount] = useState(0);
+  const [move, setMove] = useState(true);
+  const [posX, setPosX] = useState(20);
+  const [posY, setPosY] = useState(20);
+
   function pee() {
     navigator.clipboard.writeText("mc.rizzlers.org");
   }
@@ -16,8 +19,29 @@ export default function App() {
   useEffect(() => {
     setInterval(() => {
       flip();
-    }, 1000);
+    }, 10000);
   }, [flip]);
+
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
+  }
+
+  useEffect(
+    () => {
+      setInterval(() => {
+        setPosX(posX + 20);
+        setPosY(posY - 20);
+      }, 100);
+    },
+    [posX, posY],
+    setPosX,
+    setPosY
+  );
+
+  let posXstr = "20 " + "px";
+  let posYstr = toString(posY) + "px";
   if (bruh) {
     return (
       <div className="purpleBack">
@@ -26,7 +50,14 @@ export default function App() {
 
           <h5>play</h5>
           <p>click to copy to clipboard</p>
-          <div className="E" onClick={pee}>
+          <div
+            style={{
+              left: { posXstr },
+              top: { posYstr },
+              position: "absolute",
+            }}
+            onClick={pee}
+          >
             <h3>mc.rizzlers.org</h3>
           </div>
         </div>
@@ -41,7 +72,14 @@ export default function App() {
 
           <h5>play</h5>
           <p>click to copy to clipboard</p>
-          <div className="E" onClick={pee}>
+          <div
+            style={{
+              left: { posXstr },
+              top: { posYstr },
+              position: "absolute",
+            }}
+            onClick={pee}
+          >
             <h3>mc.rizzlers.org</h3>
           </div>
         </div>
